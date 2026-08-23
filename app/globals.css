@@ -1,0 +1,71 @@
+@import url("/assets/css/plugins.css");
+@import url("/assets/css/style.css");
+
+.uidoyen-header.header-on-dark {
+  background-color: transparent;
+}
+
+.uidoyen-header.header-on-dark .main-menu > ul > li > a,
+.uidoyen-header.header-on-dark .menuBar-toggle svg,
+.uidoyen-header.header-on-dark .menuBar-toggle i,
+.uidoyen-header.header-on-dark .uidoyen-menu-large-toggle svg,
+.uidoyen-header.header-on-dark .uidoyen-menu-large-toggle i {
+  color: var(--color-white);
+}
+
+.uidoyen-header.header-on-dark .uidoyen-menu-large-toggle svg path {
+  fill: var(--color-white);
+}
+
+.uidoyen-header.header-on-light {
+  background-color: transparent;
+}
+
+.uidoyen-header.header-on-light .main-menu > ul > li > a,
+.uidoyen-header.header-on-light .menuBar-toggle svg,
+.uidoyen-header.header-on-light .menuBar-toggle i,
+.uidoyen-header.header-on-light .uidoyen-menu-large-toggle svg,
+.uidoyen-header.header-on-light .uidoyen-menu-large-toggle i {
+  color: var(--color-primary);
+}
+
+.uidoyen-header.header-on-light .uidoyen-menu-large-toggle svg path {
+  fill: var(--color-primary);
+}
+
+.uidoyen-header.header-on-dark.sticky-menu {
+  background-color: var(--color-primary);
+}
+
+.uidoyen-header.header-on-dark.sticky-menu .main-menu > ul > li > a,
+.uidoyen-header.header-on-dark.sticky-menu .menuBar-toggle svg,
+.uidoyen-header.header-on-dark.sticky-menu .menuBar-toggle i,
+.uidoyen-header.header-on-dark.sticky-menu .uidoyen-menu-large-toggle svg,
+.uidoyen-header.header-on-dark.sticky-menu .uidoyen-menu-large-toggle i {
+  color: var(--color-white);
+}
+
+.uidoyen-header.header-on-dark.sticky-menu .uidoyen-menu-large-toggle svg path {
+  fill: var(--color-white);
+}
+
+.uidoyen-header.header-on-light.sticky-menu {
+  background-color: var(--color-white);
+}
+
+.uidoyen-header.header-on-light.sticky-menu .main-menu > ul > li > a,
+.uidoyen-header.header-on-light.sticky-menu .menuBar-toggle svg,
+.uidoyen-header.header-on-light.sticky-menu .menuBar-toggle i,
+.uidoyen-header.header-on-light.sticky-menu .uidoyen-menu-large-toggle svg,
+.uidoyen-header.header-on-light.sticky-menu .uidoyen-menu-large-toggle i {
+  color: var(--color-primary);
+}
+
+.uidoyen-header.header-on-light.sticky-menu .uidoyen-menu-large-toggle svg path {
+  fill: var(--color-primary);
+}
+
+.blog-pagination .pagination .page-item .page-link.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
