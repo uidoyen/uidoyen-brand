@@ -18,8 +18,18 @@ export async function generateMetadata({ params }) {
   if (!project) return {};
 
   return {
-    title: `${project.title} | Uidoyen Portfolio`,
+    title: project.title,
     description: project.excerpt,
+    keywords: [project.category, project.service, "Uidoyen portfolio", "case study"].filter(Boolean),
+    openGraph: {
+      title: project.title,
+      description: project.excerpt,
+      url: `https://uidoyen.com/portfolio/${slug}`,
+      images: project.image ? [{ url: project.image, alt: project.title }] : [],
+    },
+    alternates: {
+      canonical: `https://uidoyen.com/portfolio/${slug}`,
+    },
   };
 }
 

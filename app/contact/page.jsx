@@ -1,3 +1,26 @@
+export const metadata = {
+  title: "Contact Uidoyen – Start Automating Your Business",
+  description:
+    "Get in touch with Uidoyen to discuss your automation project. We're here to help you automate workflows, build internal tools, and create AI-powered business systems.",
+  keywords: [
+    "contact Uidoyen",
+    "AI automation consultation",
+    "business automation inquiry",
+    "get in touch",
+    "start automation project",
+    "Uidoyen contact",
+  ],
+  openGraph: {
+    title: "Contact Uidoyen – Start Automating Your Business",
+    description:
+      "Get in touch with Uidoyen to discuss your automation project. We help businesses automate workflows and build AI-powered systems.",
+    url: "https://uidoyen.com/contact",
+  },
+  alternates: {
+    canonical: "https://uidoyen.com/contact",
+  },
+};
+
 export default function ContactPage() {
   return (
     <>

@@ -1,3 +1,26 @@
+export const metadata = {
+  title: "FAQ – Common Questions About AI Automation & Uidoyen Services",
+  description:
+    "Find quick answers to common questions about Uidoyen's AI automation services, how we work, pricing, timelines, and how we can help your business grow.",
+  keywords: [
+    "AI automation FAQ",
+    "Uidoyen FAQ",
+    "business automation questions",
+    "how AI automation works",
+    "automation pricing",
+    "common automation questions",
+  ],
+  openGraph: {
+    title: "FAQ – Common Questions About AI Automation & Uidoyen Services",
+    description:
+      "Find quick answers to common questions about Uidoyen's AI automation services, how we work, pricing, and timelines.",
+    url: "https://uidoyen.com/faq",
+  },
+  alternates: {
+    canonical: "https://uidoyen.com/faq",
+  },
+};
+
 export default function FaqPage() {
   return (
     <>

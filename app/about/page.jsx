@@ -1,3 +1,27 @@
+export const metadata = {
+  title: "About Uidoyen – AI Systems That Help Businesses Work Smarter",
+  description:
+    "Learn how Uidoyen builds AI-powered systems that automate workflows, reduce manual effort, and improve business operations. Meet our team and discover our approach.",
+  keywords: [
+    "about Uidoyen",
+    "AI automation company",
+    "business automation team",
+    "how Uidoyen works",
+    "AI business solutions",
+    "intelligent business systems",
+    "workflow automation agency",
+  ],
+  openGraph: {
+    title: "About Uidoyen – AI Systems That Help Businesses Work Smarter",
+    description:
+      "Learn how Uidoyen builds AI-powered systems that automate workflows, reduce manual effort, and improve business operations.",
+    url: "https://uidoyen.com/about",
+  },
+  alternates: {
+    canonical: "https://uidoyen.com/about",
+  },
+};
+
 export default function AboutPage() {
   return (
     <>

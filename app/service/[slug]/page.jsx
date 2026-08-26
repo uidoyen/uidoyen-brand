@@ -18,8 +18,17 @@ export async function generateMetadata({ params }) {
   if (!service) return {};
 
   return {
-    title: `${service.title} | Uidoyen Services`,
+    title: service.title,
     description: service.tagline || service.excerpt,
+    keywords: service.features ?? [],
+    openGraph: {
+      title: service.title,
+      description: service.tagline || service.excerpt,
+      url: `https://uidoyen.com/service/${slug}`,
+    },
+    alternates: {
+      canonical: `https://uidoyen.com/service/${slug}`,
+    },
   };
 }
 

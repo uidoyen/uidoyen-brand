@@ -1,3 +1,12 @@
+export const metadata = {
+  title: "Page Not Found – Uidoyen",
+  description: "Sorry, the page you are looking for does not exist.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 export default function NotFoundPage() {
   return (
     <>

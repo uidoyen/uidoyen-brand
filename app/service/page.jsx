@@ -1,9 +1,28 @@
 import { getAllServices } from "../lib/services.js";
 
 export const metadata = {
-  title: "Our Services & Core Offerings | Uidoyen",
+  title: "Services – AI Automation, Business Apps & Product Engineering",
   description:
-    "AI Automation, Business Applications, AI-Powered Customer Systems, and Product Engineering services.",
+    "Uidoyen offers AI Automation, custom Business Applications, AI-Powered Customer Systems, and Product Engineering services — all designed to help growing businesses work smarter.",
+  keywords: [
+    "AI automation services",
+    "business application development",
+    "AI customer systems",
+    "product engineering services",
+    "workflow automation",
+    "custom CRM development",
+    "internal tool development",
+    "Uidoyen services",
+  ],
+  openGraph: {
+    title: "Services – AI Automation, Business Apps & Product Engineering",
+    description:
+      "Uidoyen offers AI Automation, custom Business Applications, AI-Powered Customer Systems, and Product Engineering to help businesses work smarter.",
+    url: "https://uidoyen.com/service",
+  },
+  alternates: {
+    canonical: "https://uidoyen.com/service",
+  },
 };
 
 export default function ServicePage() {

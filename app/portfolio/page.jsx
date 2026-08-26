@@ -1,8 +1,27 @@
 import { getAllProjects } from "../lib/portfolio.js";
 
 export const metadata = {
-  title: "Selected Work & Case Studies | Uidoyen",
-  description: "Explore our selected projects in AI automation, custom business applications, and AI customer experiences.",
+  title: "Portfolio – AI Automation & Business Systems Case Studies",
+  description:
+    "Explore Uidoyen's selected work: AI lead qualification systems, internal business apps, AI customer support platforms, CRM dashboards, and more.",
+  keywords: [
+    "AI automation portfolio",
+    "business automation case studies",
+    "AI projects",
+    "CRM dashboard case study",
+    "internal app development portfolio",
+    "Uidoyen work",
+    "AI customer experience projects",
+  ],
+  openGraph: {
+    title: "Portfolio – AI Automation & Business Systems Case Studies",
+    description:
+      "Explore Uidoyen's selected work: AI automation, business apps, CRM dashboards, and AI customer systems.",
+    url: "https://uidoyen.com/portfolio",
+  },
+  alternates: {
+    canonical: "https://uidoyen.com/portfolio",
+  },
 };
 
 export default function PortfolioPage() {

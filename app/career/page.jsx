@@ -1,3 +1,27 @@
+export const metadata = {
+  title: "Careers at Uidoyen – Join Our AI Automation Team",
+  description:
+    "Explore career opportunities at Uidoyen. Join a team building AI-powered systems and automation solutions for growing businesses around the world.",
+  keywords: [
+    "Uidoyen careers",
+    "AI automation jobs",
+    "join Uidoyen",
+    "tech jobs AI",
+    "software engineering jobs",
+    "business automation career",
+    "work at Uidoyen",
+  ],
+  openGraph: {
+    title: "Careers at Uidoyen – Join Our AI Automation Team",
+    description:
+      "Explore career opportunities at Uidoyen. Join a team building AI-powered automation solutions for growing businesses.",
+    url: "https://uidoyen.com/career",
+  },
+  alternates: {
+    canonical: "https://uidoyen.com/career",
+  },
+};
+
 export default function CareerPage() {
   return (
     <>

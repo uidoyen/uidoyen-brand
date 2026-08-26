@@ -6,7 +6,11 @@ import HeaderThemeController from "./components/HeaderThemeController.jsx";
 import LegacyScripts from "./components/LegacyScripts.jsx";
 
 export const metadata = {
-  title: "Uidoyen - AI Automation & Business Systems",
+  metadataBase: new URL("https://uidoyen.com"),
+  title: {
+    default: "Uidoyen – AI Automation & Business Systems",
+    template: "%s | Uidoyen",
+  },
   description:
     "Uidoyen helps growing businesses automate repetitive work, streamline operations, and build AI-powered business systems that improve efficiency and customer experiences.",
   keywords: [
@@ -18,8 +22,48 @@ export const metadata = {
     "AI agents",
     "internal tools",
     "business applications",
+    "CRM automation",
+    "product engineering",
     "Uidoyen",
   ],
+  authors: [{ name: "Uidoyen" }],
+  creator: "Uidoyen",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://uidoyen.com",
+    siteName: "Uidoyen",
+    title: "Uidoyen – AI Automation & Business Systems",
+    description:
+      "Uidoyen helps growing businesses automate repetitive work, streamline operations, and build AI-powered business systems that improve efficiency and customer experiences.",
+    images: [
+      {
+        url: "/assets/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Uidoyen – AI Automation & Business Systems",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Uidoyen – AI Automation & Business Systems",
+    description:
+      "Uidoyen helps growing businesses automate repetitive work, streamline operations, and build AI-powered business systems.",
+    images: ["/assets/images/og-image.png"],
+    creator: "@uidoyen",
+  },
 };
 
 export default function RootLayout({ children }) {

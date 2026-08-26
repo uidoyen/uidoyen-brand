@@ -19,8 +19,19 @@ export async function generateMetadata({ params }) {
   if (!post) return {};
 
   return {
-    title: `${post.title} | Uidoyen Blog`,
+    title: post.title,
     description: post.excerpt,
+    keywords: post.tags ?? [],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://uidoyen.com/blog/${slug}`,
+      type: "article",
+      publishedTime: post.date,
+    },
+    alternates: {
+      canonical: `https://uidoyen.com/blog/${slug}`,
+    },
   };
 }
 

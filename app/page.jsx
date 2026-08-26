@@ -1,3 +1,30 @@
+export const metadata = {
+  title: "Uidoyen – AI Automation & Business Systems for Growing Businesses",
+  description:
+    "Uidoyen automates business workflows with AI. We build AI-powered systems, WhatsApp automation, CRM tools, internal apps, and customer experiences that save time and boost growth.",
+  keywords: [
+    "AI automation agency",
+    "business workflow automation",
+    "WhatsApp automation",
+    "AI-powered business systems",
+    "CRM automation",
+    "lead follow-up automation",
+    "internal business apps",
+    "AI customer experience",
+    "product engineering",
+    "Uidoyen",
+  ],
+  openGraph: {
+    title: "Uidoyen – AI Automation & Business Systems for Growing Businesses",
+    description:
+      "Uidoyen automates business workflows with AI. We build AI-powered systems, WhatsApp automation, CRM tools, and customer experiences that save time and boost growth.",
+    url: "https://uidoyen.com",
+  },
+  alternates: {
+    canonical: "https://uidoyen.com",
+  },
+};
+
 export default function HomePage() {
   return (
     <>
