@@ -93,9 +93,9 @@ export default function HomePage() {
           <div className="row gx-2 gy-3 justify-content-between">
             <div className="col-12 col-xl-6 col-xxl-5">
               <div className="uidoyen__header text-center text-lg-start">
-                <h3 className="title move-anim mb-4">
+                <h2 className="title move-anim mb-4">
                   Automate the work that slows your business down
-                </h3>
+                </h2>
                 <p>
                   From lead follow-ups to internal operations, we design and
                   build AI-powered systems around the way your business actually
@@ -119,7 +119,7 @@ export default function HomePage() {
                     </div>
                     <div className="uidoyen-iconbox-data">
                       <div className="uidoyen-iconbox-data-wrapper">
-                        <h5>AI Automation</h5>
+                        <h3>AI Automation</h3>
                         <p>
                           Automate lead qualification, WhatsApp conversations,
                           follow-ups, emails, CRM updates, and repetitive
@@ -153,7 +153,7 @@ export default function HomePage() {
                     </div>
                     <div className="uidoyen-iconbox-data">
                       <div className="uidoyen-iconbox-data-wrapper">
-                        <h5>Business Applications</h5>
+                        <h3>Business Applications</h3>
                         <p>
                           Replace spreadsheets and disconnected tools with
                           custom dashboards, CRM systems, portals, approval
@@ -187,7 +187,7 @@ export default function HomePage() {
                     </div>
                     <div className="uidoyen-iconbox-data">
                       <div className="uidoyen-iconbox-data-wrapper">
-                        <h5>AI Customer Experiences</h5>
+                        <h3>AI Customer Experiences</h3>
                         <p>
                           Build smarter customer experiences with AI assistants,
                           intelligent search, recommendations, support
@@ -221,7 +221,7 @@ export default function HomePage() {
                     </div>
                     <div className="uidoyen-iconbox-data">
                       <div className="uidoyen-iconbox-data-wrapper">
-                        <h5>Product Engineering</h5>
+                        <h3>Product Engineering</h3>
                         <p>
                           Design and build production-ready web and mobile
                           products with UX/UI, scalable architecture, AI
@@ -254,7 +254,7 @@ export default function HomePage() {
           <div className="row">
             <div className="col-12">
               <div className="uidoyen__header text-center">
-                <h3 className="title move-anim">Selected work</h3>
+                <h2 className="title move-anim">Selected work</h2>
               </div>
             </div>
           </div>
@@ -275,9 +275,9 @@ export default function HomePage() {
                   </a>
 
                   <div className="uidoyen-project-content">
-                    <h5 className="line-clamp-1">
+                    <h3 className="line-clamp-1">
                       <a href="/portfolio/ai-leadflow">AI LeadFlow</a>
-                    </h5>
+                    </h3>
 
                     <span className="uidoyen-project-date text-color-primary">
                       AI Automation
@@ -300,9 +300,9 @@ export default function HomePage() {
                   </a>
 
                   <div className="uidoyen-project-content">
-                    <h5 className="line-clamp-1">
+                    <h3 className="line-clamp-1">
                       <a href="/portfolio/opspilot">OpsPilot</a>
-                    </h5>
+                    </h3>
 
                     <span className="uidoyen-project-date text-color-primary">
                       Business Application
@@ -325,9 +325,9 @@ export default function HomePage() {
                   </a>
 
                   <div className="uidoyen-project-content">
-                    <h5 className="line-clamp-1">
+                    <h3 className="line-clamp-1">
                       <a href="/portfolio/supportai">SupportAI</a>
-                    </h5>
+                    </h3>
 
                     <span className="uidoyen-project-date text-color-primary">
                       AI Customer Experience
@@ -350,9 +350,9 @@ export default function HomePage() {
                   </a>
 
                   <div className="uidoyen-project-content">
-                    <h5 className="line-clamp-1">
+                    <h3 className="line-clamp-1">
                       <a href="/portfolio/salespulse">SalesPulse</a>
-                    </h5>
+                    </h3>
 
                     <span className="uidoyen-project-date text-color-primary">
                       Business Application
@@ -375,9 +375,9 @@ export default function HomePage() {
                   </a>
 
                   <div className="uidoyen-project-content">
-                    <h5 className="line-clamp-1">
+                    <h3 className="line-clamp-1">
                       <a href="/portfolio/docuflow-ai">DocuFlow AI</a>
-                    </h5>
+                    </h3>
 
                     <span className="uidoyen-project-date text-color-primary">
                       AI Automation
@@ -400,9 +400,9 @@ export default function HomePage() {
                   </a>
 
                   <div className="uidoyen-project-content">
-                    <h5 className="line-clamp-1">
+                    <h3 className="line-clamp-1">
                       <a href="/portfolio/clinicflow">ClinicFlow</a>
-                    </h5>
+                    </h3>
 
                     <span className="uidoyen-project-date text-color-primary">
                       Business Automation
@@ -436,10 +436,10 @@ export default function HomePage() {
           <div className="row">
             <div className="col-xl-9 col-xxl-8 mx-auto">
               <div className="uidoyen__header text-center text-lg-start">
-                <h3 className="title move-anim">
+                <h2 className="title move-anim">
                   We don't automate for the sake of AI. We automate what makes
                   your business better.
-                </h3>
+                </h2>
               </div>
             </div>
           </div>
@@ -509,7 +509,7 @@ export default function HomePage() {
           <div className="row g-4">
             <div className="col-12 col-xl-6 col-xxl-5 gsap-sticky">
               <div className="uidoyen__header text-center text-lg-start">
-                <h3 className="title">Our latest news and insights</h3>
+                <h2 className="title">Our latest news and insights</h2>
               </div>
             </div>
             <div className="col-12 col-xl-6 col-xxl-6 gsap-scroll">
@@ -522,14 +522,18 @@ export default function HomePage() {
                   >
                     <div className="uidoyen-blog-content">
                       <span className="uidoyen-blog-date">March 8, 2024</span>
-                      <h5 className="line-clamp-3">
+                      <h3 className="line-clamp-3">
                         <a href="/blog/brand-audit">
                           Reveal business opportunities with our five point
                           brand audit
                         </a>
-                      </h5>
+                      </h3>
 
-                      <a className="uidoyen-link-btn" href="/blog/brand-audit">
+                      <a
+                        className="uidoyen-link-btn"
+                        href="/blog/brand-audit"
+                        aria-label="Read more about Reveal business opportunities with our five point brand audit"
+                      >
                         Read more
                         <span>
                           <i className="fa-solid fa-arrow-right arry1"></i>
@@ -559,16 +563,17 @@ export default function HomePage() {
                   >
                     <div className="uidoyen-blog-content">
                       <span className="uidoyen-blog-date">March 8, 2024</span>
-                      <h5 className="line-clamp-3">
+                      <h3 className="line-clamp-3">
                         <a href="/blog/ai-driven-agency-workflows">
                           Uidoyen agency revolutionizes work with the power of
                           ai-driven
                         </a>
-                      </h5>
+                      </h3>
 
                       <a
                         className="uidoyen-link-btn"
                         href="/blog/ai-driven-agency-workflows"
+                        aria-label="Read more about Uidoyen agency revolutionizes work with the power of ai-driven"
                       >
                         Read more
                         <span>
@@ -599,16 +604,17 @@ export default function HomePage() {
                   >
                     <div className="uidoyen-blog-content">
                       <span className="uidoyen-blog-date">March 8, 2024</span>
-                      <h5 className="line-clamp-3">
+                      <h3 className="line-clamp-3">
                         <a href="/blog/young-leaders-growth">
                           How young leaders can take charge of their
                           professional growth
                         </a>
-                      </h5>
+                      </h3>
 
                       <a
                         className="uidoyen-link-btn"
                         href="/blog/young-leaders-growth"
+                        aria-label="Read more about How young leaders can take charge of their professional growth"
                       >
                         Read more
                         <span>

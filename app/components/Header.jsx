@@ -25,7 +25,7 @@ export function HeaderChrome() {
       {/* Preloader End */}
 
       {/* back to to button start*/}
-      <a href="#" id="scroll-top" className="back-to-top-btn">
+      <a href="#" id="scroll-top" className="back-to-top-btn" aria-label="Scroll to top">
         <i className="fa-solid fa-arrow-up"></i>
       </a>
       {/* back to to button end*/}
@@ -39,7 +39,7 @@ export function HeaderChrome() {
                 <img src="/assets/images/logo-1.svg" alt="logo" />
               </a>
             </div>
-            <button className="uidoyen-menu-toggle mobile">
+            <button className="uidoyen-menu-toggle mobile" aria-label="Toggle navigation menu">
               <i className="ri-close-line"></i>
             </button>
           </div>
@@ -82,7 +82,7 @@ export function HeaderChrome() {
               </h6>
             </div>
             <div className="social-btn style3">
-              <a href="https://www.facebook.com/">
+              <a href="https://www.facebook.com/" aria-label="Facebook">
                 <span className="link-effect">
                   <span className="effect-1">
                     <i className="fab fa-facebook"></i>
@@ -92,7 +92,7 @@ export function HeaderChrome() {
                   </span>
                 </span>
               </a>
-              <a href="https://instagram.com/">
+              <a href="https://instagram.com/" aria-label="Instagram">
                 <span className="link-effect">
                   <span className="effect-1">
                     <i className="fab fa-instagram"></i>
@@ -102,7 +102,7 @@ export function HeaderChrome() {
                   </span>
                 </span>
               </a>
-              <a href="https://twitter.com/">
+              <a href="https://twitter.com/" aria-label="Twitter">
                 <span className="link-effect">
                   <span className="effect-1">
                     <i className="fab fa-twitter"></i>
@@ -112,7 +112,7 @@ export function HeaderChrome() {
                   </span>
                 </span>
               </a>
-              <a href="https://dribbble.com/">
+              <a href="https://dribbble.com/" aria-label="Dribbble">
                 <span className="link-effect">
                   <span className="effect-1">
                     <i className="fab fa-dribbble"></i>
@@ -140,7 +140,7 @@ export function HeaderChrome() {
             type="button"
             className="btn-close"
             data-bs-dismiss="offcanvas"
-            aria-label="Close"
+            aria-label="Close menu"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +225,10 @@ export default function Header() {
                       </li>
                     </ul>
                   </nav>
-                  <button className="menuBar-toggle uidoyen-menu-toggle d-inline-block d-lg-none">
+                  <button
+                    className="menuBar-toggle uidoyen-menu-toggle d-inline-block d-lg-none"
+                    aria-label="Open mobile navigation menu"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40"
@@ -246,6 +249,7 @@ export default function Header() {
                     data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasRight"
                     aria-controls="offcanvasRight"
+                    aria-label="Open navigation menu"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

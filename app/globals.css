@@ -69,3 +69,86 @@
   background-color: var(--color-primary);
   color: var(--color-white);
 }
+
+/* ── Typography & Heading Visual Styling Overrides ────────────────────────── */
+
+/* Match exact original h5 responsive typography for card headings (h2/h3) */
+.uidoyen-blog-box .uidoyen-blog-content h2,
+.uidoyen-blog-box .uidoyen-blog-content h3,
+.uidoyen-blog-box .uidoyen-blog-content h5,
+.uidoyen-service-box .uidoyen-iconbox-data h3,
+.uidoyen-service-box .uidoyen-iconbox-data h5,
+.uidoyen-project-content h3,
+.uidoyen-project-content h5 {
+  font-size: 28px;
+  line-height: 135.714%;
+  letter-spacing: -0.28px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .uidoyen-blog-box .uidoyen-blog-content h2,
+  .uidoyen-blog-box .uidoyen-blog-content h3,
+  .uidoyen-blog-box .uidoyen-blog-content h5,
+  .uidoyen-service-box .uidoyen-iconbox-data h3,
+  .uidoyen-service-box .uidoyen-iconbox-data h5,
+  .uidoyen-project-content h3,
+  .uidoyen-project-content h5 {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .uidoyen-blog-box .uidoyen-blog-content h2,
+  .uidoyen-blog-box .uidoyen-blog-content h3,
+  .uidoyen-blog-box .uidoyen-blog-content h5,
+  .uidoyen-service-box .uidoyen-iconbox-data h3,
+  .uidoyen-service-box .uidoyen-iconbox-data h5,
+  .uidoyen-project-content h3,
+  .uidoyen-project-content h5 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .uidoyen-blog-box .uidoyen-blog-content h2,
+  .uidoyen-blog-box .uidoyen-blog-content h3,
+  .uidoyen-blog-box .uidoyen-blog-content h5,
+  .uidoyen-service-box .uidoyen-iconbox-data h3,
+  .uidoyen-service-box .uidoyen-iconbox-data h5,
+  .uidoyen-project-content h3,
+  .uidoyen-project-content h5 {
+    font-size: 22px;
+  }
+}
+
+.uidoyen-blog-box.style-2 .uidoyen-blog-content h2 a,
+.uidoyen-blog-box.style-2 .uidoyen-blog-content h3 a,
+.uidoyen-blog-box.style-2 .uidoyen-blog-content h5 a {
+  position: relative;
+  display: inline;
+  background-image: linear-gradient(
+    to right,
+    currentColor 0%,
+    currentColor 100%
+  );
+  background-size: 0px 2px;
+  background-position: 0px 95%;
+  transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+  padding: 0.1% 0px;
+  background-repeat: no-repeat;
+  color: inherit;
+}
+
+.uidoyen-blog-box.style-2:hover .uidoyen-blog-content h2 a,
+.uidoyen-blog-box.style-2:hover .uidoyen-blog-content h3 a,
+.uidoyen-blog-box.style-2:hover .uidoyen-blog-content h5 a {
+  background-size: 100% 2px;
+}
+
+.uidoyen-project-content h3 a,
+.uidoyen-project-content h5 a {
+  color: inherit;
+}
+
+

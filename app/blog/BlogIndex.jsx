@@ -47,11 +47,15 @@ export default function BlogIndex({ currentPage = 1 }) {
                 >
                   <div className="uidoyen-blog-content">
                     <span className="uidoyen-blog-date">{formatPostDate(post.date)}</span>
-                    <h5 className="line-clamp-3">
+                    <h2 className="line-clamp-3">
                       <a href={`/blog/${post.slug}`}>{post.title}</a>
-                    </h5>
+                    </h2>
 
-                    <a className="uidoyen-link-btn" href={`/blog/${post.slug}`}>
+                    <a
+                      className="uidoyen-link-btn"
+                      href={`/blog/${post.slug}`}
+                      aria-label={`Read more about ${post.title}`}
+                    >
                       Read more
                       <span>
                         <i className="fa-solid fa-arrow-right arry1"></i>

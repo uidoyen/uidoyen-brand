@@ -90,6 +90,7 @@ export default function Footer() {
                           href="https://x.com"
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Follow Uidoyen on Twitter / X"
                         >
                           <i className="fab fa-x-twitter"></i>
                         </a>
@@ -99,6 +100,7 @@ export default function Footer() {
                           href="https://instagram.com"
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Follow Uidoyen on Instagram"
                         >
                           <i className="fab fa-instagram"></i>
                         </a>
@@ -108,6 +110,7 @@ export default function Footer() {
                           href="https://linkedin.com"
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Follow Uidoyen on LinkedIn"
                         >
                           <i className="fab fa-linkedin"></i>
                         </a>
@@ -117,6 +120,7 @@ export default function Footer() {
                           href="https://behance.net"
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Follow Uidoyen on Behance"
                         >
                           <i className="fab fa-behance"></i>
                         </a>
@@ -126,6 +130,7 @@ export default function Footer() {
                           href="https://dribbble.com"
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Follow Uidoyen on Dribbble"
                         >
                           <i className="fab fa-dribbble"></i>
                         </a>
