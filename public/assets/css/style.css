@@ -2353,7 +2353,7 @@ a.uidoyen-default-btn.sm-size {
 }
 @media only screen and (min-width: 1400px) {
   .hero2-content h1 {
-    font-size: 130px;
+    font-size: 120px;
   }
 }
 .hero2-content h1 span {
@@ -3496,7 +3496,7 @@ a.uidoyen-default-btn.sm-size {
 
 @media only screen and (min-width: 1400px) {
   .uidoyen-service2-section .uidoyen__header .title {
-    max-width: 516px;
+    max-width: 550px;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -6674,4 +6674,3 @@ a.uidoyen-default-btn.sm-size {
 }
 /* Animation css end  */
 
-/*# sourceMappingURL=style.css.map */

@@ -1,6 +1,7 @@
 export const metadata = {
   title: {
-    absolute: "Uidoyen – AI Automation & Business Systems for Growing Businesses",
+    absolute:
+      "Uidoyen – AI Automation & Business Systems for Growing Businesses",
   },
   description:
     "Uidoyen automates business workflows with AI. We build AI-powered systems, WhatsApp automation, CRM tools, internal apps, and customer experiences that save time and boost growth.",
@@ -91,12 +92,12 @@ export default function HomePage() {
       >
         <div className="container custom-container">
           <div className="row gx-2 gy-3 justify-content-between">
-            <div className="col-12 col-xl-6 col-xxl-5">
-              <div className="uidoyen__header text-center text-lg-start">
+            <div className="col-12 col-xl-6 col-xxl-6">
+              <div className="uidoyen__header service_hero_title text-center text-lg-start">
                 <h2 className="title move-anim mb-4">
                   Automate the work that slows your business down
                 </h2>
-                <p>
+                <p className="w-75">
                   From lead follow-ups to internal operations, we design and
                   build AI-powered systems around the way your business actually
                   works.

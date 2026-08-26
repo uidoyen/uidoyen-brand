@@ -61,7 +61,10 @@
   color: var(--color-primary);
 }
 
-.uidoyen-header.header-on-light.sticky-menu .uidoyen-menu-large-toggle svg path {
+.uidoyen-header.header-on-light.sticky-menu
+  .uidoyen-menu-large-toggle
+  svg
+  path {
   fill: var(--color-primary);
 }
 
@@ -151,4 +154,6 @@
   color: inherit;
 }
 
-
+.uidoyen__header.service_hero_title h2 {
+  font-size: 80px;
+}
