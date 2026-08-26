@@ -1,5 +1,7 @@
 export const metadata = {
-  title: "Uidoyen – AI Automation & Business Systems for Growing Businesses",
+  title: {
+    absolute: "Uidoyen – AI Automation & Business Systems for Growing Businesses",
+  },
   description:
     "Uidoyen automates business workflows with AI. We build AI-powered systems, WhatsApp automation, CRM tools, internal apps, and customer experiences that save time and boost growth.",
   keywords: [
@@ -18,10 +20,10 @@ export const metadata = {
     title: "Uidoyen – AI Automation & Business Systems for Growing Businesses",
     description:
       "Uidoyen automates business workflows with AI. We build AI-powered systems, WhatsApp automation, CRM tools, and customer experiences that save time and boost growth.",
-    url: "https://uidoyen.com",
+    url: "/",
   },
   alternates: {
-    canonical: "https://uidoyen.com",
+    canonical: "/",
   },
 };
 
@@ -49,25 +51,32 @@ export default function HomePage() {
                   streamline operations, and build AI-powered systems that save
                   time and improve customer experiences.
                 </p>
-              </div>
-              <div className="hero-actions d-flex flex-wrap gap-2 gap-md-2 mt-4 fade-anim" data-delay="1.4" data-direction="bottom">
-                <a
-                  href="/contact"
-                  className="uidoyen-link-btn btn-pill btn-light"
-                >
-                  Automate Your Business
-                </a>
 
-                <a
-                  href="/service"
-                  className="uidoyen-link-btn btn-pill btn-light"
+                <div
+                  className="hero-actions d-flex flex-wrap gap-2 gap-md-2 mt-4 move-anim"
+                  data-delay="1"
+                  data-direction="bottom"
                 >
-                  See What We Automate
-                  <span>
-                    <i className="fa-solid fa-arrow-right arry1"></i>
-                    <i className="fa-solid fa-arrow-right arry2"></i>
-                  </span>
-                </a>
+                  <a
+                    href="/contact"
+                    className="uidoyen-link-btn btn-pill btn-light"
+                  >
+                    Automate Your Business
+                  </a>
+                  <span
+                    style={{ width: "10px", display: "inline-block" }}
+                  ></span>
+                  <a
+                    href="/service"
+                    className="uidoyen-link-btn btn-pill btn-light"
+                  >
+                    See What We Automate
+                    <span>
+                      <i className="fa-solid fa-arrow-right arry1"></i>
+                      <i className="fa-solid fa-arrow-right arry2"></i>
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

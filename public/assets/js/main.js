@@ -117,7 +117,7 @@
   };
 
   // If thumbnail slider exists, initialize it and connect to content slider
-  if (thumbSliderElement) {
+  if (typeof Swiper !== "undefined" && thumbSliderElement) {
     var thumbSlider = new Swiper(".uidoyen-testimonial__thumb-slider", {
       fadeEffect: { crossFade: true },
       effect: "fade",
@@ -133,11 +133,13 @@
     contentSliderConfig.allowTouchMove = true;
   }
 
-  // Initialize the content slider with the appropriate configuration
-  var testimonialInfo = new Swiper(
-    ".uidoyen-testimonial__content-slider",
-    contentSliderConfig,
-  );
+  // Initialize the content slider with the appropriate configuration if element & Swiper exist
+  if (typeof Swiper !== "undefined" && document.querySelector(".uidoyen-testimonial__content-slider")) {
+    var testimonialInfo = new Swiper(
+      ".uidoyen-testimonial__content-slider",
+      contentSliderConfig,
+    );
+  }
 
   const uidoyenProjectSlider = document.querySelector(
     ".uidoyen-project__slider",
@@ -146,7 +148,7 @@
     ".uidoyen-project__slider-navigation",
   );
 
-  if (uidoyenProjectSlider && uidoyenProjectSliderNavigation) {
+  if (typeof Swiper !== "undefined" && uidoyenProjectSlider && uidoyenProjectSliderNavigation) {
     var swiper = new Swiper(uidoyenProjectSlider, {
       slidesPerView: 1,
       loop: true,
@@ -179,7 +181,7 @@
   const testimonialSlider = document.querySelector(
     ".uidoyen-testimonial2__slider",
   );
-  if (testimonialSlider) {
+  if (typeof Swiper !== "undefined" && testimonialSlider) {
     const swiper = new Swiper(testimonialSlider, {
       loop: true,
       slidesPerView: 1,
@@ -387,7 +389,7 @@
   );
 
   // Check if all required elements are available
-  if (testimonial3Element && testimonial3NextButton && testimonial3PrevButton) {
+  if (typeof Swiper !== "undefined" && testimonial3Element && testimonial3NextButton && testimonial3PrevButton) {
     const testimonial3Slider = new Swiper(testimonial3Element, {
       slidesPerView: 1,
       spaceBetween: 20,

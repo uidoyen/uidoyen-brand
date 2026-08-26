@@ -65,13 +65,19 @@ export default function Footer() {
                         <a href="/service/ai-automation">AI Automation</a>
                       </li>
                       <li>
-                        <a href="/service/business-applications">Business Applications</a>
+                        <a href="/service/business-applications">
+                          Business Applications
+                        </a>
                       </li>
                       <li>
-                        <a href="/service/ai-customer-systems">AI-Powered Customer Systems</a>
+                        <a href="/service/ai-customer-systems">
+                          AI-Powered Customer Systems
+                        </a>
                       </li>
                       <li>
-                        <a href="/service/product-engineering">Product Engineering</a>
+                        <a href="/service/product-engineering">
+                          Product Engineering
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -138,7 +144,7 @@ export default function Footer() {
             <div className="col-12">
               <div className="footer__bottom-content row-padding-bottom">
                 <div className="copyright-text text-color-white">
-                  All rights reserved — 2026 &copy; uidoyen
+                  All rights reserved — 2026 &copy; Uidoyen
                 </div>
                 <a href="#sticky-menu" className="scroll-to-top section-link">
                   Back to top

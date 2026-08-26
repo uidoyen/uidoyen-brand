@@ -6,13 +6,15 @@ import HeaderThemeController from "./components/HeaderThemeController.jsx";
 import LegacyScripts from "./components/LegacyScripts.jsx";
 
 export const metadata = {
-  metadataBase: new URL("https://uidoyen.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://uidoyen.com"
+  ),
   title: {
-    default: "Uidoyen – AI Automation & Business Systems",
-    template: "%s | Uidoyen",
+    default: "Uidoyen | We automate business workflows with AI",
+    template: "%s | Uidoyen - AI Automation & Business Systems",
   },
   description:
-    "Uidoyen helps growing businesses automate repetitive work, streamline operations, and build AI-powered business systems that improve efficiency and customer experiences.",
+    "Uidoyen helps growing businesses automate repetitive work, streamline operations, and build AI-powered systems that save time and improve customer experiences.",
   keywords: [
     "AI automation",
     "business automation",
@@ -31,18 +33,18 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
-      "max-snippet": -1,
-      "max-image-preview": "large",
       "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://uidoyen.com",
+    locale: "en_IN",
     siteName: "Uidoyen",
     title: "Uidoyen – AI Automation & Business Systems",
     description:
