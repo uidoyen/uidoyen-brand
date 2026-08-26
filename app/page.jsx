@@ -50,7 +50,7 @@ export default function HomePage() {
                   time and improve customer experiences.
                 </p>
               </div>
-              <div className="hero-actions d-flex flex-wrap gap-2 gap-md-2 mt-4">
+              <div className="hero-actions d-flex flex-wrap gap-2 gap-md-2 mt-4 fade-anim" data-delay="1.4" data-direction="bottom">
                 <a
                   href="/contact"
                   className="uidoyen-link-btn btn-pill btn-light"
