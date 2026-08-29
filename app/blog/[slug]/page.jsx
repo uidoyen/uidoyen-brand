@@ -37,15 +37,21 @@ export async function generateMetadata({ params }) {
 
 function MarkdownBlock({ block }) {
   if (block.type === "heading") {
-    return <h4>{block.text}</h4>;
+    if (block.level === 2) {
+      return <h2 dangerouslySetInnerHTML={{ __html: block.html }} />;
+    }
+    if (block.level === 3) {
+      return <h3 dangerouslySetInnerHTML={{ __html: block.html }} />;
+    }
+    return <h4 dangerouslySetInnerHTML={{ __html: block.html }} />;
   }
 
   if (block.type === "quote") {
     return (
-      <blockquote>
+      <blockquote className="blog-blockquote">
         <img src="/assets/images/icons/blockquote.svg" alt="blockquote" />
         <div className="text">
-          <p>{block.text}</p>
+          <p dangerouslySetInnerHTML={{ __html: block.html }} />
         </div>
       </blockquote>
     );
@@ -53,28 +59,41 @@ function MarkdownBlock({ block }) {
 
   if (block.type === "image") {
     return (
-      <div className="uidoyen-single-thumb overflow-hidden">
+      <div className="uidoyen-single-thumb overflow-hidden my-4">
         <img
           src={block.src}
-          alt={block.alt}
-          data-speed="0.8"
-          className="w-100"
+          alt={block.alt || "blog image"}
+          className="w-100 rounded"
         />
       </div>
     );
   }
 
   if (block.type === "list") {
+    if (block.listType === "ordered") {
+      return (
+        <ol className="blog-list blog-list-ordered">
+          {block.items.map((item, idx) => (
+            <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+          ))}
+        </ol>
+      );
+    }
     return (
-      <ul>
-        {block.items.map((item) => (
-          <li key={item}>{item}</li>
+      <ul className="blog-list blog-list-unordered">
+        {block.items.map((item, idx) => (
+          <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
         ))}
       </ul>
     );
   }
 
-  return <p className="blog-text">{block.text}</p>;
+  return (
+    <p
+      className="blog-text"
+      dangerouslySetInnerHTML={{ __html: block.html || block.text }}
+    />
+  );
 }
 
 export default async function BlogPostPage({ params }) {

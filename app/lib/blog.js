@@ -65,7 +65,22 @@ export function getPostBySlug(slug) {
   return getAllPosts().find((post) => post.slug === slug);
 }
 
+export function parseInlineMarkdown(text) {
+  if (!text) return "";
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+    .replace(/__(.*?)__/g, "<strong>$1</strong>")
+    .replace(/\*(.*?)\*/g, "<em>$1</em>")
+    .replace(/_(.*?)_/g, "<em>$1</em>")
+    .replace(/`(.*?)`/g, "<code>$1</code>")
+    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+}
+
 export function markdownToBlocks(markdown) {
+  if (!markdown) return [];
   const blocks = [];
   const lines = markdown.split("\n");
   let index = 0;
@@ -78,27 +93,36 @@ export function markdownToBlocks(markdown) {
       continue;
     }
 
+    if (line.startsWith("#### ")) {
+      blocks.push({ type: "heading", level: 4, html: parseInlineMarkdown(line.slice(5).trim()) });
+      index += 1;
+      continue;
+    }
+
+    if (line.startsWith("### ")) {
+      blocks.push({ type: "heading", level: 3, html: parseInlineMarkdown(line.slice(4).trim()) });
+      index += 1;
+      continue;
+    }
+
     if (line.startsWith("## ")) {
-      blocks.push({ type: "heading", text: line.slice(3).trim() });
+      blocks.push({ type: "heading", level: 2, html: parseInlineMarkdown(line.slice(3).trim()) });
       index += 1;
       continue;
     }
 
     if (line.startsWith("> ")) {
       const quote = [];
-
-      while (lines[index]?.trim().startsWith("> ")) {
+      while (index < lines.length && lines[index]?.trim().startsWith("> ")) {
         quote.push(lines[index].trim().slice(2));
         index += 1;
       }
-
-      blocks.push({ type: "quote", text: quote.join(" ") });
+      blocks.push({ type: "quote", html: parseInlineMarkdown(quote.join(" ")) });
       continue;
     }
 
     if (line.startsWith("![") && line.includes("](") && line.endsWith(")")) {
-      const imageMatch = line.match(/^!\[(.*)]\((.*)\)$/);
-
+      const imageMatch = line.match(/^!\[(.*?)\]\((.*?)\)$/);
       if (imageMatch) {
         blocks.push({
           type: "image",
@@ -106,39 +130,55 @@ export function markdownToBlocks(markdown) {
           src: imageMatch[2],
         });
       }
-
       index += 1;
       continue;
     }
 
-    if (line.startsWith("- ")) {
+    if (line.startsWith("- ") || line.startsWith("* ")) {
       const items = [];
-
-      while (lines[index]?.trim().startsWith("- ")) {
-        items.push(lines[index].trim().slice(2));
+      while (
+        index < lines.length &&
+        (lines[index]?.trim().startsWith("- ") || lines[index]?.trim().startsWith("* "))
+      ) {
+        const itemText = lines[index].trim().slice(2).trim();
+        items.push(parseInlineMarkdown(itemText));
         index += 1;
       }
+      blocks.push({ type: "list", listType: "unordered", items });
+      continue;
+    }
 
-      blocks.push({ type: "list", items });
+    if (/^\d+\.\s+/.test(line)) {
+      const items = [];
+      while (index < lines.length && /^\d+\.\s+/.test(lines[index]?.trim())) {
+        const itemText = lines[index].trim().replace(/^\d+\.\s+/, "").trim();
+        items.push(parseInlineMarkdown(itemText));
+        index += 1;
+      }
+      blocks.push({ type: "list", listType: "ordered", items });
       continue;
     }
 
     const paragraph = [];
-
     while (
       index < lines.length &&
       lines[index].trim() &&
       !lines[index].trim().startsWith("## ") &&
+      !lines[index].trim().startsWith("### ") &&
+      !lines[index].trim().startsWith("#### ") &&
       !lines[index].trim().startsWith("> ") &&
       !lines[index].trim().startsWith("![") &&
-      !lines[index].trim().startsWith("- ")
+      !lines[index].trim().startsWith("- ") &&
+      !lines[index].trim().startsWith("* ") &&
+      !/^\d+\.\s+/.test(lines[index].trim())
     ) {
       paragraph.push(lines[index].trim());
       index += 1;
     }
 
-    blocks.push({ type: "paragraph", text: paragraph.join(" ") });
+    blocks.push({ type: "paragraph", html: parseInlineMarkdown(paragraph.join(" ")) });
   }
 
   return blocks;
 }
+

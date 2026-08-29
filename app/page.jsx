@@ -1,3 +1,5 @@
+import { getAllPosts, formatPostDate } from "./lib/blog.js";
+
 export const metadata = {
   title: {
     absolute:
@@ -29,7 +31,10 @@ export const metadata = {
 };
 
 export default function HomePage() {
+  const latestPosts = getAllPosts().slice(0, 3);
+
   return (
+
     <>
       {/* Hero section Start */}
       <section
@@ -515,129 +520,50 @@ export default function HomePage() {
             </div>
             <div className="col-12 col-xl-6 col-xxl-6 gsap-scroll">
               <div className="row uidoyen-blog2__row">
-                <div className="col-12">
-                  <div
-                    className="uidoyen-blog-box style-2 border-bottom-style fade-anim"
-                    data-delay="0.30"
-                    data-direction="right"
-                  >
-                    <div className="uidoyen-blog-content">
-                      <span className="uidoyen-blog-date">March 8, 2024</span>
-                      <h3 className="line-clamp-3">
-                        <a href="/blog/brand-audit">
-                          Reveal business opportunities with our five point
-                          brand audit
-                        </a>
-                      </h3>
-
-                      <a
-                        className="uidoyen-link-btn"
-                        href="/blog/brand-audit"
-                        aria-label="Read more about Reveal business opportunities with our five point brand audit"
-                      >
-                        Read more
-                        <span>
-                          <i className="fa-solid fa-arrow-right arry1"></i>
-                          <i className="fa-solid fa-arrow-right arry2"></i>
+                {latestPosts.map((post, index) => (
+                  <div className="col-12" key={post.slug}>
+                    <div
+                      className={`uidoyen-blog-box style-2 ${
+                        index < latestPosts.length - 1 ? "border-bottom-style" : ""
+                      } fade-anim`}
+                      data-delay={(0.3 + Math.min(index, 2) * 0.15).toFixed(2)}
+                      data-direction="right"
+                    >
+                      <div className="uidoyen-blog-content">
+                        <span className="uidoyen-blog-date">
+                          {formatPostDate(post.date)}
                         </span>
-                      </a>
-                    </div>
-                    <div className="uidoyen-blog-thumb">
-                      <a
-                        className="d-inline-block overflow-hidden"
-                        href="/blog/brand-audit"
-                      >
-                        <img
-                          src="/assets/images/blog/blog-thumb-1.png"
-                          alt="blog-thumb"
-                          className="w-100"
-                        />
-                      </a>
+                        <h3 className="line-clamp-3">
+                          <a href={`/blog/${post.slug}`}>{post.title}</a>
+                        </h3>
+
+                        <a
+                          className="uidoyen-link-btn"
+                          href={`/blog/${post.slug}`}
+                          aria-label={`Read more about ${post.title}`}
+                        >
+                          Read more
+                          <span>
+                            <i className="fa-solid fa-arrow-right arry1"></i>
+                            <i className="fa-solid fa-arrow-right arry2"></i>
+                          </span>
+                        </a>
+                      </div>
+                      <div className="uidoyen-blog-thumb">
+                        <a
+                          className="d-inline-block overflow-hidden"
+                          href={`/blog/${post.slug}`}
+                        >
+                          <img
+                            src={post.image || "/assets/images/blog/blog-thumb-1.png"}
+                            alt={post.title}
+                            className="w-100"
+                          />
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="col-12">
-                  <div
-                    className="uidoyen-blog-box style-2 border-bottom-style fade-anim"
-                    data-delay="0.45"
-                    data-direction="right"
-                  >
-                    <div className="uidoyen-blog-content">
-                      <span className="uidoyen-blog-date">March 8, 2024</span>
-                      <h3 className="line-clamp-3">
-                        <a href="/blog/ai-driven-agency-workflows">
-                          Uidoyen agency revolutionizes work with the power of
-                          ai-driven
-                        </a>
-                      </h3>
-
-                      <a
-                        className="uidoyen-link-btn"
-                        href="/blog/ai-driven-agency-workflows"
-                        aria-label="Read more about Uidoyen agency revolutionizes work with the power of ai-driven"
-                      >
-                        Read more
-                        <span>
-                          <i className="fa-solid fa-arrow-right arry1"></i>
-                          <i className="fa-solid fa-arrow-right arry2"></i>
-                        </span>
-                      </a>
-                    </div>
-                    <div className="uidoyen-blog-thumb">
-                      <a
-                        className="d-inline-block overflow-hidden"
-                        href="/blog/ai-driven-agency-workflows"
-                      >
-                        <img
-                          src="/assets/images/blog/blog-thumb-2.png"
-                          alt="blog-thumb"
-                          className="w-100"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12">
-                  <div
-                    className="uidoyen-blog-box style-2 fade-anim"
-                    data-delay="0.60"
-                    data-direction="right"
-                  >
-                    <div className="uidoyen-blog-content">
-                      <span className="uidoyen-blog-date">March 8, 2024</span>
-                      <h3 className="line-clamp-3">
-                        <a href="/blog/young-leaders-growth">
-                          How young leaders can take charge of their
-                          professional growth
-                        </a>
-                      </h3>
-
-                      <a
-                        className="uidoyen-link-btn"
-                        href="/blog/young-leaders-growth"
-                        aria-label="Read more about How young leaders can take charge of their professional growth"
-                      >
-                        Read more
-                        <span>
-                          <i className="fa-solid fa-arrow-right arry1"></i>
-                          <i className="fa-solid fa-arrow-right arry2"></i>
-                        </span>
-                      </a>
-                    </div>
-                    <div className="uidoyen-blog-thumb">
-                      <a
-                        className="d-inline-block overflow-hidden"
-                        href="/blog/young-leaders-growth"
-                      >
-                        <img
-                          src="/assets/images/blog/blog-thumb-3.png"
-                          alt="blog-thumb"
-                          className="w-100"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
