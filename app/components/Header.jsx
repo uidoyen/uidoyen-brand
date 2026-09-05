@@ -1,3 +1,5 @@
+import ScrollToTopButton from "./ScrollToTopButton.jsx";
+
 export function HeaderChrome() {
   return (
     <>
@@ -24,11 +26,9 @@ export function HeaderChrome() {
 
       {/* Preloader End */}
 
-      {/* back to to button start*/}
-      <a href="#" id="scroll-top" className="back-to-top-btn" aria-label="Scroll to top">
-        <i className="fa-solid fa-arrow-up"></i>
-      </a>
-      {/* back to to button end*/}
+      {/* back to top button start*/}
+      <ScrollToTopButton />
+      {/* back to top button end*/}
 
       {/* Mobile Menu */}
       <div className="uidoyen-menu-wrapper">

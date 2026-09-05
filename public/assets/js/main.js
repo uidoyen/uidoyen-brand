@@ -804,12 +804,8 @@
 
         const targetID = this.getAttribute("href");
 
-        if (targetID === "#header") {
-          gsap.to(window, {
-            duration: 1.5,
-            scrollTo: { y: 0 },
-            ease: "power2.inOut",
-          });
+        if (targetID === "#header" || targetID === "#sticky-menu" || targetID === "#") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
         } else {
           const targetSection = document.querySelector(targetID);
           if (targetSection) {

@@ -1,4 +1,13 @@
+"use client";
+
 export default function Footer() {
+  const scrollToTop = (e) => {
+    e.preventDefault();
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="footer-area bg-color-primary overflow-hidden">
       <div className="footer__center section-padding-top-bottom">
@@ -151,7 +160,11 @@ export default function Footer() {
                 <div className="copyright-text text-color-white">
                   All rights reserved — 2026 &copy; Uidoyen
                 </div>
-                <a href="#sticky-menu" className="scroll-to-top section-link">
+                <a
+                  href="#sticky-menu"
+                  className="scroll-to-top section-link"
+                  onClick={scrollToTop}
+                >
                   Back to top
                   <i className="fas fa-angle-up"></i>
                 </a>
